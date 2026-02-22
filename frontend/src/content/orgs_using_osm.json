@@ -1,0 +1,97 @@
+[
+  {
+    "name": "HOT",
+    "image": "hot.svg",
+    "link": "https://www.hotosm.org"
+  },
+  {
+    "name": "DHL",
+    "image": "dhl.png",
+    "link": "https://www.dhl.com"
+  },
+  {
+    "name": "Amazon",
+    "image": "amazon.webp",
+    "link": "https://www.amazon.com/"
+  },
+  {
+    "name": "Lyft",
+    "image": "lyft.png",
+    "link": "https://www.lyft.com"
+  },
+  {
+    "name": "ABC News",
+    "image": "abc.svg",
+    "link": "https://abc.com"
+  },
+  {
+    "name": "Apple",
+    "image": "apple.svg",
+    "link": "https://maps.apple.com/"
+  },
+  {
+    "name": "Microsoft",
+    "image": "microsoft.png",
+    "link": "https://www.microsoft.com"
+  },
+  {
+    "name": "Meta",
+    "image": "meta.webp",
+    "link": "https://developers.meta.com/maps/"
+  },
+  {
+    "name": "Mapbox",
+    "image": "mapbox-logo.png",
+    "link": "https://www.mapbox.com/"
+  },
+  {
+    "name": "Grab (GrabMaps)",
+    "image": "grab-logo.png",
+    "link": "https://www.grab.com/"
+  },
+  {
+    "name": "Mapillary",
+    "image": "mapillary-logo.png",
+    "link": "https://www.mapillary.com/"
+  },
+  {
+    "name": "American Red Cross",
+    "image": "american-red-cross-logo.png",
+    "link": "https://www.redcross.org"
+  },
+  {
+    "name": "YouthMappers",
+    "image": "youthmappers-logo.png",
+    "link": "https://www.youthmappers.org"
+  },
+  {
+    "name": "Trufi Association",
+    "image": "trufi-logo.png",
+    "link": "https://www.trufi-association.org"
+  },
+  {
+    "name": "World Bank",
+    "image": "world-bank-logo.png",
+    "link": "https://www.worldbank.org"
+  },
+  {
+    "name": "Niantic",
+    "image": "niantic-logo.png",
+    "link": "https://nianticlabs.com/"
+  },
+  {
+    "name": "Global Forest Watch",
+    "image": "global-forest-watch-logo.png",
+    "link": "https://www.globalforestwatch.org/"
+  },
+  {
+    "name": "Komoot",
+    "image": "komoot-logo.png",
+    "link": "https://www.komoot.com/"
+  },
+  {
+    "name": "Uber",
+    "image": "uber.png",
+    "link": "https://www.uber.com/"
+  }
+]

@@ -20,7 +20,7 @@ const MapContainer = ({
   setViewState: Dispatch<ViewState>;
   children: React.ReactNode;
   handleMapClick: (e: MapLayerMouseEvent) => void;
-  handleMapHover: (e: MapLayerMouseEvent) => void;
+  handleMapHover?: (e: MapLayerMouseEvent) => void;
   interactiveLayerIds: string[] | undefined;
 }) => {
   return (
@@ -36,6 +36,7 @@ const MapContainer = ({
       interactiveLayerIds={interactiveLayerIds}
       onMouseMove={handleMapHover}
       onMouseLeave={handleMapHover}
+      projection={{ type: "globe" }}
     >
       {children}
     </Map>

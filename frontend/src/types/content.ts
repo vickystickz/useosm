@@ -172,3 +172,24 @@ export type TOSMStats = {
   mappedFeatures: number;
   changesets: number;
 };
+
+export type UseCaseItemType = {
+  title: string;
+  description: string;
+  link?: string;
+  image?: {
+    path?: string;
+    alt?: string;
+  };
+  author?: string[];
+  source?: {
+    name?: string;
+    link?: string;
+  };
+};
+
+export type OSMUsecaseContentsType = {
+  [slug: string]: {
+    "use-cases": UseCaseItemType[];
+  };
+};
