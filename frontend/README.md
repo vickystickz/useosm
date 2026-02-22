@@ -7,6 +7,7 @@ This is the frontend for the **UseOSM** project, built using [Astro](https://ast
 ## Project Overview
 
 The UseOSM frontend is designed to:
+
 - Highlight organizations and platforms that use OpenStreetMap (OSM).
 - Provide an engaging and user-friendly interface for exploring OSM-related resources.
 - Support community engagement through events, webinars, and contributions.
@@ -16,7 +17,6 @@ The UseOSM frontend is designed to:
 ## Project Structure
 
 The frontend follows a modular structure:
-
 
 - **`src/`**: Contains all source code, including:
   - **`components/`**: Reusable UI components organized by feature (e.g., `footer`, `header`, `ui`).
@@ -38,6 +38,7 @@ The frontend follows a modular structure:
 To set up the frontend locally, follow these steps:
 
 1. **Clone the Repository**:
+
    ```sh
    git clone https://github.com/unpatterned-labs/useosm.git
    cd frontend
@@ -45,18 +46,21 @@ To set up the frontend locally, follow these steps:
 
 2. **Install Dependencies**:
    Ensure you have [pnpm](https://pnpm.io/) installed, then run:
+
    ```sh
    pnpm install
    ```
 
 3. **Start the Development Server**:
    Run:
+
    ```sh
    pnpm dev
    ```
 
 4. **Build the Production Site**:
    Run:
+
    ```sh
    pnpm build
    ```
@@ -82,6 +86,7 @@ To manually trigger these checks, you can run:
 pnpm lint
 pnpm format:check
 ```
+
 ## Want to Learn More?
 
 Feel free to check the [astro documentation](https://docs.astro.build).
