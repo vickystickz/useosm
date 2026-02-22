@@ -19,5 +19,5 @@ const { entry } = Astro.props;
 ---
 
 <Layout title={entry.data.usecase} description={entry.data.description}>
-  <UsecaseLayout data={entry.data} />
+  <UsecaseLayout data={entry.data} slug={entry.slug} />
 </Layout>

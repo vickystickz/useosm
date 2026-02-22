@@ -7,15 +7,7 @@ import {
 import OsmStep1 from "@/assets/images/osm_step_1.jpg";
 import OsmStep2 from "@/assets/images/osm_step_2.jpg";
 import OsmStep3 from "@/assets/images/osm_step_3.jpg";
-import HOT from "@/assets/images/organizations/hot.svg";
-import DHL from "@/assets/images/organizations/dhl.png";
-import Amazon from "@/assets/images/organizations/amazon.webp";
-import Lyft from "@/assets/images/organizations/lyft.png";
-import ABC from "@/assets/images/organizations/abc.svg";
-import Apple from "@/assets/images/organizations/apple.svg";
-import Meta from "@/assets/images/organizations/meta.webp";
-import Microsoft from "@/assets/images/organizations/microsoft.png";
-import Uber from "@/assets/images/organizations/uber.png";
+import OSM_USING_OSM from "@/content/orgs_using_osm.json";
 
 export const APP_CONTENT: AppConfigType = {
   USECASES: {
@@ -34,35 +26,35 @@ export const APP_CONTENT: AppConfigType = {
         description:
           "City governments and researchers using OSM for planning, zoning, or policy analysis.",
         route: generateUsecasePath("Urban Planning"),
-        active: false,
+        active: true,
       },
       {
         title: "Education & Research",
         description:
           "How universities and students use OSM in classrooms, thesis work, and citizen science.",
         route: generateUsecasePath("Education & Research"),
-        active: false,
+        active: true,
       },
       {
         title: "Mobility & Transport",
         description:
           "Ride-sharing, routing, bike networks, accessibility, and how tools like GraphHopper, Valhalla, and OsmAnd power them.",
         route: generateUsecasePath("Mobility & Transport"),
-        active: false,
+        active: true,
       },
       {
         title: "Environment & Climate",
         description:
           "Deforestation, climate monitoring, biodiversity tracking. Show examples using OSM + satellite imagery.",
         route: generateUsecasePath("Environment & Climate"),
-        active: false,
+        active: true,
       },
       {
         title: "Navigation & Location Services",
         description:
           "Tech companies building navigation apps or local services using OSM data.",
         route: generateUsecasePath("Navigation & Location Services"),
-        active: false,
+        active: true,
       },
     ],
   },
@@ -119,54 +111,7 @@ export const APP_CONTENT: AppConfigType = {
       title: "OSM Data is used by top industries around the world",
       description:
         "OpenStreetMap is utilized by leading sectors across the globe, enhancing navigation, logistics, and urban planning, humanitarian response.",
-      Organizations: [
-        {
-          name: "HOT",
-          image: HOT.src,
-          link: "https://www.hotosm.org",
-        },
-        {
-          name: "DHL",
-          image: DHL.src,
-          link: "https://www.dhl.com",
-        },
-        {
-          name: "Amazon",
-          image: Amazon.src,
-          link: "https://www.amazon.com/",
-        },
-
-        {
-          name: "Lyft",
-          image: Lyft.src,
-          link: "https://www.lyft.com",
-        },
-        {
-          name: "ABC News",
-          image: ABC.src,
-          link: "https://abc.com",
-        },
-          {
-          name: "Apple",
-          image: Apple.src,
-          link: "https://maps.apple.com/",
-        },
-        {
-          name: "Microsoft",
-          image: Microsoft.src,
-          link: "https://www.microsoft.com",
-        },
-         {
-          name: "Meta",
-          image: Meta.src,
-          link: "https://developers.meta.com/maps/",
-        },
-        {
-          name: "Uber",
-          image: Uber.src,
-          link: "https://www.uber.com/",
-        },
-      ],
+      Organizations: OSM_USING_OSM,
     },
     OSMStats: {
       title: "See how OpenStreetMap is making a difference around the world",
@@ -233,7 +178,7 @@ export const APP_CONTENT: AppConfigType = {
           id: "osm-communities-layer",
           type: "fill", // better for point-based community data
           paint: {
-            "fill-color": "#2860c9",
+            "fill-color": "#5c7745",
             "fill-opacity": 0.2,
           },
         },

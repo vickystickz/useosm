@@ -5,25 +5,44 @@ import Button from "@/components/ui/astro-ui/button.astro";
 import Tag from "@/components/ui/astro-ui/tag.astro";
 import HeroImage from "@/components/shared/astro-components/hero-image.astro";
 import { parseHeroText } from "@/utils/text-formatter";
+import OSMUsecaseContents from "@/content/osm_usecases.json";
+import type { OSMUsecaseContentsType } from "@/types/content";
 interface Props {
   data: Record<string, string>;
+  slug: string;
 }
 
-const { data } = Astro.props;
+const typedOSMUsecaseContents = OSMUsecaseContents as OSMUsecaseContentsType;
+
+const { data, slug } = Astro.props;
 const heroText = parseHeroText(data.title);
 
-const usecases = Object.keys(data)
-  .filter((key) => key.startsWith("usecase") && key.endsWith("Title"))
-  .map((key) => {
-    const index = key.match(/\d+/)?.[0];
-    return {
-      title: data[`usecase${index}Title`],
-      description: data[`usecase${index}Description`],
-      imagePath: data[`usecase${index}ImagePath`],
-      articleLink: data[`usecase${index}CTALink`],
-    };
-  })
-  .filter((item) => item.title && item.description);
+type UseCase = {
+  title: string;
+  description: string;
+  imagePath?: string;
+  imageAlt?: string;
+  articleLink?: string;
+  authors?: string[];
+  sourceName?: string;
+  sourceLink?: string;
+};
+
+const usecases: UseCase[] =
+  typedOSMUsecaseContents[slug]?.["use-cases"]
+    ?.map(
+      (item): UseCase => ({
+        title: item.title,
+        description: item.description,
+        imagePath: item.image?.path,
+        imageAlt: item.image?.alt,
+        articleLink: item.link,
+        authors: item.author,
+        sourceName: item.source?.name,
+        sourceLink: item.source?.link,
+      }),
+    )
+    .filter((item) => item.title && item.description && item.imagePath) || [];
 
 const callToActionCards = Object.keys(data)
   .filter((key) => key.startsWith("CTACard") && key.endsWith("Title"))
@@ -119,7 +138,7 @@ const callToActionCards = Object.keys(data)
               <img
                 src={usecase.imagePath}
                 alt={usecase.title}
-                class="w-full rounded-xl border border-gray-200 object-cover shadow-sm"
+                class="h-120 w-full rounded-xl border border-gray-200 object-cover shadow-sm"
                 loading="lazy"
               />
             </div>
